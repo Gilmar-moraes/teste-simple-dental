@@ -31,12 +31,6 @@ public class ProfissionalService {
 
     @Transactional
     public Profissional saveProfissional(Profissional profissional) {
-    	/*boolean dataNscEmUso = profissionalRepository.findByDataNascimento(profissional.getNascimento())
-    			.stream()
-    			.anyMatch(profissionalExiste -> !profissionalExiste.equals(profissional));
-    	if (dataNscEmUso) {
-    		throw new NegocioException("Profissional já em uso");
-		}*/
         return profissionalRepository.save(profissional);
     }
 
